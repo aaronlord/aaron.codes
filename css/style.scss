@@ -1,0 +1,203 @@
+//
+// SETTINGS
+//
+@import "bower_components/inuit-defaults/settings.defaults";
+@import "bower_components/inuit-responsive-settings/settings.responsive";
+// settings.responsive
+$breakpoints : join($breakpoints, (
+    'mobile' : 'screen and (min-width: 360px)',
+    'tablet' : 'screen and (min-width: 600px)',
+));
+@import "settings.spacing-units";
+
+// settings.colors
+$color-blue: #2BA6CB;
+
+$color-text: #777777;
+$color-text--light: #bababa;
+$color-headings: #353535;
+$color-ui: #eee;
+$color-brand: $color-blue;
+
+$inuit-base-text-color: $color-text;
+
+//
+// TOOLS
+//
+@import "bower_components/inuit-functions/tools.functions";
+@import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-tools-widths/tools.widths";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+@import "tools.mixins";
+
+
+//
+// GENERIC
+//
+@import "bower_components/inuit-normalize/generic.normalize";
+@import "bower_components/inuit-box-sizing/generic.box-sizing";
+
+
+//
+// BASE
+//
+@import "bower_components/inuit-page/base.page";
+// base.page
+html {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+body {
+    min-width: 320px;
+}
+
+h1,
+.alpha,
+h2,
+.beta {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; // semibold
+    color: $color-headings;
+}
+
+h1,
+.alpha {
+    @include font-size(52px);
+    margin: $spacing-unit--large 0 $spacing-unit;
+}
+
+h2,
+.beta {
+    @include font-size(28px);
+    margin: $spacing-unit 0;
+    border-bottom: 1px solid $color-ui;
+}
+
+p {
+    margin: 0 0 $spacing-unit;
+}
+
+a {
+    text-decoration: none;
+}
+
+//
+// OBJECTS
+//
+@import "bower_components/inuit-list-inline/objects.list-inline";
+$inuit-enable-pack--auto: true;
+@import "bower_components/inuit-pack/objects.pack";
+@import "bower_components/inuit-layout/objects.layout";
+$inuit-enable-flag--top: true;
+$inuit-enable-flag--rev: true;
+@import "bower_components/inuit-flag/objects.flag";
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-unit--small;
+
+    @include media-query('tablet') {
+        padding-left: $spacing-unit;
+        padding-right: $spacing-unit;
+    }
+
+    &.wrapper--fill {
+        max-width: initial;
+    }
+}
+
+//
+// COMPONENTS
+//
+// components.site-nav
+.site-nav {
+    border-bottom: 1px solid $color-ui;
+    overflow: hidden;
+    padding: $spacing-unit--small 0 0;
+    text-align: center;
+
+    @include media-query('tablet') {
+        text-align: left;
+    }
+}
+    .site-nav__list {
+        @extend %pack;
+        @extend %pack--auto;
+        margin:  0;
+        padding: 0;
+
+        @include media-query('tablet') {
+            display: initial;
+            float: right;
+            width: auto;
+        }
+    }
+        .site-nav__item {
+            @extend %pack__item;
+
+            @include media-query('tablet') {
+                display: inline-block;
+            }
+        }
+            .site-nav__link {
+                border-bottom: 1px solid transparent;
+                display: block;
+                padding: $spacing-unit--small $spacing-unit--tiny;
+
+                &:hover {
+                    border-bottom-color: $color-brand;
+                }
+
+                @include media-query('tablet') {
+                    padding-top: 0;
+                }
+            }
+
+            .site-nav__home {
+                @include media-query('tablet') {
+                    display: inline-block;
+                }
+            }
+
+blockquote {
+    @include font-size(15px);
+    font-family: 'Merriweather', serif;
+    font-style:  italic;
+    padding: $spacing-unit--tiny 0 $spacing-unit--tiny $spacing-unit;
+    margin:  0 0 $spacing-unit;
+    border-left: 1px solid $color-ui;
+
+    p {
+        &:first-child {
+            &:before {
+                content: '“';
+            }
+        }
+
+        &:last-child,
+        &:only-of-type {
+            margin-bottom: $spacing-unit--tiny;
+
+            &:after {
+                content: '”';
+            }
+        }
+    }
+}
+    cite {
+        @include font-size(12px);
+        color: $color-text--light;
+
+        &:before {
+            content: '~ ';
+        }
+    }
+
+//
+// TRUMPS
+//
+$inuit-widths-columns: (12);
+@import "bower_components/inuit-widths/trumps.widths";
+$inuit-enable-margins--negative: true;
+@import "bower_components/inuit-spacing/trumps.spacing";

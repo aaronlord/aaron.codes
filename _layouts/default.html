@@ -1,20 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="page {% if page.selector %}page--{{ page.selector }} {% endif %}no-js" lang="en">
+    <head>
+        {% include head.html %}
+    </head>
+    <body>
+        <header class="site-head">
+            <nav class="site-nav">
+                <div class="wrapper wrapper--fill">
+                    <div class="site-nav__home">
+                        <a href="#">
+                            <span class="brand">aaron<span class="brand__dot">.</span>codes</span>
+                        </a>
+                    </div>
 
-  {% include head.html %}
+                    <ul class="site-nav__list">
+                        {% assign _pages = site.pages | sort: 'site_nav_index' %}
+                        {% for page in _pages %}
+                            {% if page.title %}
+                                <li class="site-nav__item">
+                                    <a class="site-nav__link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
         {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+    </body>
 </html>
