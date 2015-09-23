@@ -1,0 +1,17 @@
+<figure class="browser">
+    <nav class="browser__chrome">
+        <ul class="browser__list">
+            <li class="browser__item">
+                <div class="browser__blob browser__blob--close">&nbsp;</div>
+            <li class="browser__item">
+                <div class="browser__blob browser__blob--minimize">&nbsp;</div>
+            <li class="browser__item">
+                <a href="{{ include.maximize }}" class="browser__blob browser__blob--maximize">&nbsp;</a>
+        </ul>
+
+        <div class="browser__omnibar">
+            <a href="#">{{ include.url }}</a>
+        </div>
+    </nav>
+    <img class="browser__img" src="{{ include.src }}" alt="{{ include.alt }}">
+</figure>

@@ -16,6 +16,7 @@
   ],
   "devDependencies": {
     "inuit-flag": "~0.3.2",
+    "inuit-images": "~0.3.3",
     "inuit-layout": "~0.3.2",
     "inuit-list-inline": "~0.3.2",
     "inuit-pack": "~0.1.1",

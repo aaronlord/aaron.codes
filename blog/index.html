@@ -4,3 +4,7 @@ selector: blog
 title: Blog
 site_nav_index: 4
 ---
+
+{% for post in site.posts %}
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+{% endfor %}
