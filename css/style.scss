@@ -145,7 +145,12 @@ $inuit-enable-flag--rev: true;
                 display: block;
                 padding: $spacing-unit--small $spacing-unit--tiny;
 
-                &:hover {
+                &:hover,
+                .page--work     &.site-nav__work,
+                .page--services &.site-nav__services,
+                .page--blog     &.site-nav__blog,
+                .page--contact  &.site-nav__contact,
+                .page--hire     &.site-nav__hire {
                     border-bottom-color: $color-brand;
                 }
 
