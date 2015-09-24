@@ -7,6 +7,8 @@
 $breakpoints : join($breakpoints, (
     'mobile' : 'screen and (min-width: 360px)',
     'tablet' : 'screen and (min-width: 600px)',
+    'desk'   : 'screen and (min-width: 1024px)',
+    'desk-hd': 'screen and (min-width: 1366px)',
 ));
 @import "settings.spacing-units";
 
@@ -80,6 +82,7 @@ p {
 }
 
 a {
+    color: $color-brand;
     text-decoration: none;
 }
 
@@ -96,6 +99,13 @@ dd {
         &:first-child {
             margin-top: 0;
         }
+    }
+
+.brand {
+    color: $color-headings;
+}
+    .brand__dot {
+        color: $color-text--light;
     }
 
 //
@@ -119,6 +129,11 @@ $inuit-enable-flag--rev: true;
         padding-right: $spacing-unit;
     }
 
+    @include media-query('desk') {
+        padding-left: $spacing-unit--large;
+        padding-right: $spacing-unit--large;
+    }
+
     &.wrapper--fill {
         max-width: initial;
     }
@@ -131,12 +146,15 @@ $inuit-enable-flag--rev: true;
 .site-nav {
     border-bottom: 1px solid $color-ui;
     overflow: hidden;
-    padding: $spacing-unit--small 0 0;
+    padding-top: $spacing-unit--small;
     text-align: center;
 
     @include media-query('tablet') {
+        padding-top: 0;
         text-align: left;
     }
+
+
 }
     .site-nav__list {
         @extend %pack;
@@ -157,10 +175,21 @@ $inuit-enable-flag--rev: true;
                 display: inline-block;
             }
         }
+            .site-nav__link,
+            .site-nav__brand {
+                padding: $spacing-unit--small $spacing-unit--tiny;
+
+                @include media-query('desk-hd') {
+                    padding-top: $spacing-unit;
+                    padding-bottom: $spacing-unit;
+                }
+            }
+
             .site-nav__link {
+                @include font-size(14px);
                 border-bottom: 1px solid transparent;
                 display: block;
-                padding: $spacing-unit--small $spacing-unit--tiny;
+                color: $color-headings;
 
                 &:hover,
                 .page--work     &.site-nav__work,
@@ -172,12 +201,13 @@ $inuit-enable-flag--rev: true;
                 }
 
                 @include media-query('tablet') {
-                    padding-top: 0;
+                    @include font-size($inuit-base-font-size);
                 }
             }
 
-            .site-nav__home {
+            .site-nav__brand {
                 @include media-query('tablet') {
+                    @include font-size(18px);
                     display: inline-block;
                 }
             }
