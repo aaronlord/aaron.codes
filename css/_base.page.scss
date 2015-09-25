@@ -10,5 +10,10 @@ html {
 
 body {
     min-width: 320px;
-    padding-bottom: $spacing-unit--large;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
 }

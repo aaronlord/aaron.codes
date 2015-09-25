@@ -48,17 +48,43 @@ $inuit-enable-flag--rev: true;
 @import "objects.chapter";
 @import "objects.article";
 
+.vertically-centered {
+    position: relative;
+    height: 100%;
+}
+    .vertically-centered__content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        @include vendor(transform, translateY(-50%));
+
+        .vertically-centered--ish & {
+            top: 40%;
+            @include vendor(transform, translateY(-40%));
+        }
+    }
+
 //
 // COMPONENTS
 //
 @import "components.site-nav";
 @import "components.browser";
 
+.masthead {
+    .heading {
+        margin: 0;
+    }
+    .subheading {
+        margin: 0;
+        color: $color-text;
+    }
+}
 
 //
 // TRUMPS
 //
 $inuit-widths-columns: (12);
 $inuit-enable-margins--negative: true;
+$inuit-enable-margins--negative-large: true;
 @import "bower_components/inuit-widths/trumps.widths";
 @import "bower_components/inuit-spacing/trumps.spacing";

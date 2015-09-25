@@ -19,7 +19,6 @@ light on the letters I recieved this morning.
 >
 > 2. Going to the bank to set up a business bank account. At the moment I'm being paid into
 one of my personal accounts, which is probably bad (since the business is a seperate entity).
-> <cite>Me</cite>
 
 #### 1. The Accountants.
 

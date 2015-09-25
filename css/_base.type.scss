@@ -69,12 +69,10 @@ h2 {
 }
 
 h3,
-h4 {
+h4,
+h5,
+h6 {
     margin: $spacing-unit 0 $spacing-unit--small;
-}
-
-h5 {
-
 }
 
 h6 {
@@ -86,12 +84,20 @@ h6 {
 //
 
 p {
-    margin: 0 0 $spacing-unit;
+    margin: 0 0 $spacing-unit--small;
 }
 
 a {
     color: $color-brand;
     text-decoration: none;
+}
+
+ul {
+    margin: 0 0 $spacing-unit;
+}
+
+strong {
+    font-weight: 500;
 }
 
 dl,
@@ -117,20 +123,23 @@ blockquote {
     margin:  0 0 $spacing-unit;
     border-left: 1px solid $color-ui;
 
-    p {
+    > p {
         &:first-child {
             &:before {
                 content: '“';
             }
         }
 
-        &:last-child,
-        &:only-of-type {
+        &:nth-last-child(2) {
             margin-bottom: $spacing-unit--tiny;
 
             &:after {
                 content: '”';
             }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }
