@@ -1,15 +1,11 @@
 .site-nav {
     border-bottom: 1px solid $color-ui;
     overflow: hidden;
-    padding-top: $spacing-unit--small;
     text-align: center;
 
     @include media-query('tablet') {
-        padding-top: 0;
         text-align: left;
     }
-
-
 }
     .site-nav__list {
         @extend %pack;
@@ -61,6 +57,8 @@
             }
 
             .site-nav__brand {
+                padding-bottom: 0;
+
                 @include media-query('tablet') {
                     @include font-size(18px);
                     display: inline-block;
