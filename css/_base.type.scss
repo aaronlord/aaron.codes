@@ -23,12 +23,12 @@ h2,
 
 h3,
 .gamma{
-    @include font-size(20px);
+    @include font-size(24px);
 }
 
 h4,
 .delta{
-    @include font-size(18px);
+    @include font-size(20px);
 }
 
 h5,
@@ -49,7 +49,11 @@ small,
 // HEADINGS
 //
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600; // semibold
     color: $color-headings;
@@ -62,6 +66,19 @@ h1 {
 h2 {
     margin: $spacing-unit 0;
     border-bottom: 1px solid $color-ui;
+}
+
+h3,
+h4 {
+    margin: $spacing-unit 0 $spacing-unit--small;
+}
+
+h5 {
+
+}
+
+h6 {
+    color: $color-text--light;
 }
 
 //
@@ -125,6 +142,31 @@ blockquote {
             content: '~ ';
         }
     }
+
+pre {
+    background: #f7f7f7;
+    border-radius: 4px;
+    padding: $spacing-unit--small;
+
+    @include media-query('tablet') {
+        padding: $spacing-unit;
+    }
+
+    code {
+        padding: 0;
+        background: none;
+        border-radius: 0;
+    }
+}
+
+code {
+    font-family: 'Roboto Mono', monospace;
+    padding: 0.2em;
+    margin: 0;
+    font-size: 90%;
+    background: #f7f7f7;
+    border-radius: 4px;
+}
 
 //
 // BRAND

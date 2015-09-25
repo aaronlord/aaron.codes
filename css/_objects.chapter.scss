@@ -38,6 +38,16 @@
 
         }
 
-    .chapter__articles {
+    .chapter__meta {
+        display: none;
 
+        @include media-query('desk') {
+            width: $three-twelfths;
+            margin-left: $one-twelfth;
+            display: inline-block;
+        }
+
+        @include media-query('desk-hd') {
+            width: $four-twelfths;
+        }
     }

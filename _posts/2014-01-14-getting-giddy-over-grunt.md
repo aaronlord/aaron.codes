@@ -2,8 +2,7 @@
 name: post
 layout: post
 title: "Getting giddy over Grunt."
-date: 2014-01-14 13:15:29
-categories: js javascript grunt automation
+tags: js javascript grunt automation
 ---
 
 [Grunt](http://gruntjs.com/) is an aptly named JavaScript taskrunner that - once
@@ -55,9 +54,7 @@ Let's imagine our app currently has a directory structure like this:
 
 ## Guide
 
-### Installation and Setup {#installation}
-
-#### Install Grunt
+#### Install Grunt {#installation}
 
 Grunt is a command line app. We'll need to install it globally so we can access
 it from anywhere on the system.

@@ -3,14 +3,14 @@ layout: default
 ---
 
 <div class="wrapper">
-    <div class="layout"><!--
-        --><div class="layout__item u-7/12">
-            <h1 class="alpha">{{ page.title }}</h1>
-            <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-        </div><!--
+    <section class="chapter"><!--
+        --><header class="chapter__header">
+            <h1 class="kilo">{{ page.title }}</h1>
+            <h6>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</h6>
+        </header><!--
 
-        --><div class="layout__item u-7/12">
+        --><div class="chapter__content">
             {{ content }}
         </div><!--
-    --></div>
+    --></section>
 </div>

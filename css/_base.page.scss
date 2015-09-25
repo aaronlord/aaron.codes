@@ -1,7 +1,13 @@
 html {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    font-size: 0.9em;
+
+    @include media-query('tablet') {
+        font-size: 1em;
+    }
 }
+
 body {
     min-width: 320px;
     padding-bottom: $spacing-unit--large;
