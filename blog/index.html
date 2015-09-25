@@ -5,6 +5,21 @@ title: Blog
 site_nav_index: 4
 ---
 
-{% for post in site.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-{% endfor %}
+<div class="wrapper">
+    <div class="layout"><!--
+        --><div class="layout__item u-7/12">
+            <h1 class="alpha">I blog ... sometimes</h1>
+            <p>Occasionally, I work on something that isn’t shrouded by an NDA
+                and get to showcase it here. This introduction sucks.</p>
+        </div><!--
+
+        --><div class="layout__item">
+            {% for post in site.posts %}
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <h3 class="gamma">{{ post.title }}</h3>
+                    <p>Aaron Lord on {{ post.date | date_to_string }}</p>
+                </a>
+            {% endfor %}
+        </div><!--
+    --></div>
+</div>

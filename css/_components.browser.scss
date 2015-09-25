@@ -1,0 +1,61 @@
+.browser {
+    padding: 0;
+    margin:  0 0 $spacing-unit;
+    border: 1px solid $color-ui;
+    display: inline-block;
+    border-radius: 4px;
+    width: 100%;
+}
+    .browser__chrome {
+        line-height: 0;
+        background: $color-ui;
+        padding: $spacing-unit--micro $spacing-unit--tiny;
+        overflow: hidden;
+    }
+        .browser__list {
+            @extend %list-inline;
+            float: left;
+        }
+            .browser__item {
+                margin-right: $spacing-unit--micro;
+            }
+                .browser__blob {
+                    $size: 10px;
+                    width:         $size;
+                    height:        $size;
+                    border-radius: $size;
+                    background: #fff;
+                    display: block;
+                    margin: 1px 0;
+
+                    &.browser__blob--close {
+                        background: #DC5844;
+                    }
+                    &.browser__blob--minimize {
+                        background: #EBB74E;
+                    }
+                    &.browser__blob--maximize {
+                        background: #9AD05E;
+                    }
+                }
+
+                .browser__omnibar {
+                    $size: $spacing-unit--small;
+
+                    height: $size + 4;
+                    margin:  -2px 0 0 $spacing-unit--micro;
+                    padding: 0 $spacing-unit--micro;
+                    background: #fff;
+                    border-radius: 2px;
+                    width: 55%;
+                    display: inline-block;
+                    float: left;
+
+                    a {
+                        @include font-size(11px, $size + 4);
+                        color: $color-text--light;
+                    }
+                }
+    .browser__img {
+        width: 100%;
+    }

@@ -1,0 +1,43 @@
+.chapter {
+    @extend %layout;
+}
+    .chapter__header,
+    .chapter__content,
+    .chapter__meta,
+    .chapter__articles {
+        @extend %layout__item;
+    }
+
+    .chapter__header,
+    .chapter__content {
+        @include media-query('tablet') {
+            width: $eleven-twelfths;
+        }
+
+        @include media-query('tablet-hd') {
+            width: $ten-twelfths;
+        }
+
+        @include media-query('desk') {
+            width: $eight-twelfths;
+        }
+
+        @include media-query('desk-hd') {
+            width: $seven-twelfths;
+        }
+    }
+
+    .chapter__header {
+
+    }
+
+    .chapter__content {
+
+    }
+        .chapter__intro {
+
+        }
+
+    .chapter__articles {
+
+    }

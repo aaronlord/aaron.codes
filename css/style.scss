@@ -3,25 +3,10 @@
 //
 @import "bower_components/inuit-defaults/settings.defaults";
 @import "bower_components/inuit-responsive-settings/settings.responsive";
-// settings.responsive
-$breakpoints : join($breakpoints, (
-    'mobile' : 'screen and (min-width: 360px)',
-    'tablet' : 'screen and (min-width: 600px)',
-    'desk'   : 'screen and (min-width: 1024px)',
-    'desk-hd': 'screen and (min-width: 1366px)',
-));
+@import "settings.responsive";
 @import "settings.spacing-units";
-
-// settings.colors
-$color-blue: #2BA6CB;
-
-$color-text: #777777;
-$color-text--light: #bababa;
-$color-headings: #353535;
-$color-ui: #eee;
-$color-brand: $color-blue;
-
-$inuit-base-text-color: $color-text;
+@import "settings.colors";
+@import "settings.widths";
 
 //
 // TOOLS
@@ -45,273 +30,35 @@ $inuit-base-text-color: $color-text;
 //
 @import "bower_components/inuit-page/base.page";
 @import "bower_components/inuit-images/base.images";
-// base.page
-html {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-}
-body {
-    min-width: 320px;
-    padding-bottom: $spacing-unit--large;
-}
+@import "base.page";
+@import "base.type";
 
-h1,
-.alpha,
-h2,
-.beta {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; // semibold
-    color: $color-headings;
-}
-
-h1,
-.alpha {
-    @include font-size(52px);
-    margin: $spacing-unit--large 0 $spacing-unit;
-}
-
-h2,
-.beta {
-    @include font-size(28px);
-    margin: $spacing-unit 0;
-    border-bottom: 1px solid $color-ui;
-}
-
-p {
-    margin: 0 0 $spacing-unit;
-}
-
-a {
-    color: $color-brand;
-    text-decoration: none;
-}
-
-dl,
-dt,
-dd {
-    margin:  0;
-    padding: 0;
-}
-    dt {
-        font-weight: 500;
-        margin-top: $spacing-unit--small;
-
-        &:first-child {
-            margin-top: 0;
-        }
-    }
-
-.brand {
-    color: $color-headings;
-}
-    .brand__dot {
-        color: $color-text--light;
-    }
 
 //
 // OBJECTS
 //
-@import "bower_components/inuit-list-inline/objects.list-inline";
 $inuit-enable-pack--auto: true;
-@import "bower_components/inuit-pack/objects.pack";
-@import "bower_components/inuit-layout/objects.layout";
 $inuit-enable-flag--top: true;
 $inuit-enable-flag--rev: true;
+@import "bower_components/inuit-list-inline/objects.list-inline";
+@import "bower_components/inuit-pack/objects.pack";
+@import "bower_components/inuit-layout/objects.layout";
 @import "bower_components/inuit-flag/objects.flag";
-
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 $spacing-unit--small;
-
-    @include media-query('tablet') {
-        padding-left: $spacing-unit;
-        padding-right: $spacing-unit;
-    }
-
-    @include media-query('desk') {
-        padding-left: $spacing-unit--large;
-        padding-right: $spacing-unit--large;
-    }
-
-    &.wrapper--fill {
-        max-width: initial;
-    }
-}
+@import "objects.wrapper";
+@import "objects.chapter";
+@import "objects.article";
 
 //
 // COMPONENTS
 //
-// components.site-nav
-.site-nav {
-    border-bottom: 1px solid $color-ui;
-    overflow: hidden;
-    padding-top: $spacing-unit--small;
-    text-align: center;
+@import "components.site-nav";
+@import "components.browser";
 
-    @include media-query('tablet') {
-        padding-top: 0;
-        text-align: left;
-    }
-
-
-}
-    .site-nav__list {
-        @extend %pack;
-        @extend %pack--auto;
-        margin:  0;
-        padding: 0;
-
-        @include media-query('tablet') {
-            display: initial;
-            float: right;
-            width: auto;
-        }
-    }
-        .site-nav__item {
-            @extend %pack__item;
-
-            @include media-query('tablet') {
-                display: inline-block;
-            }
-        }
-            .site-nav__link,
-            .site-nav__brand {
-                padding: $spacing-unit--small $spacing-unit--tiny;
-
-                @include media-query('desk-hd') {
-                    padding-top: $spacing-unit;
-                    padding-bottom: $spacing-unit;
-                }
-            }
-
-            .site-nav__link {
-                @include font-size(14px);
-                border-bottom: 1px solid transparent;
-                display: block;
-                color: $color-headings;
-
-                &:hover,
-                .page--work     &.site-nav__work,
-                .page--services &.site-nav__services,
-                .page--blog     &.site-nav__blog,
-                .page--contact  &.site-nav__contact,
-                .page--hire     &.site-nav__hire {
-                    border-bottom-color: $color-brand;
-                }
-
-                @include media-query('tablet') {
-                    @include font-size($inuit-base-font-size);
-                }
-            }
-
-            .site-nav__brand {
-                @include media-query('tablet') {
-                    @include font-size(18px);
-                    display: inline-block;
-                }
-            }
-
-blockquote {
-    @include font-size(15px);
-    font-family: 'Merriweather', serif;
-    font-style:  italic;
-    padding: $spacing-unit--tiny 0 $spacing-unit--tiny $spacing-unit;
-    margin:  0 0 $spacing-unit;
-    border-left: 1px solid $color-ui;
-
-    p {
-        &:first-child {
-            &:before {
-                content: '“';
-            }
-        }
-
-        &:last-child,
-        &:only-of-type {
-            margin-bottom: $spacing-unit--tiny;
-
-            &:after {
-                content: '”';
-            }
-        }
-    }
-}
-    cite {
-        @include font-size(12px);
-        color: $color-text--light;
-
-        &:before {
-            content: '~ ';
-        }
-    }
-
-.browser {
-    padding: 0;
-    margin:  0 0 $spacing-unit;
-    border: 1px solid $color-ui;
-    display: inline-block;
-    border-radius: 4px;
-    width: 100%;
-}
-    .browser__chrome {
-        line-height: 0;
-        background: $color-ui;
-        padding: $spacing-unit--micro $spacing-unit--tiny;
-        overflow: hidden;
-    }
-        .browser__list {
-            @extend %list-inline;
-            float: left;
-        }
-            .browser__item {
-                margin-right: $spacing-unit--micro;
-            }
-                .browser__blob {
-                    $size: 10px;
-                    width:         $size;
-                    height:        $size;
-                    border-radius: $size;
-                    background: #fff;
-                    display: block;
-                    margin: 1px 0;
-
-                    &.browser__blob--close {
-                        background: #DC5844;
-                    }
-                    &.browser__blob--minimize {
-                        background: #EBB74E;
-                    }
-                    &.browser__blob--maximize {
-                        background: #9AD05E;
-                    }
-                }
-
-                .browser__omnibar {
-                    $size: $spacing-unit--small;
-
-                    height: $size + 4;
-                    margin:  -2px 0 0 $spacing-unit--micro;
-                    padding: 0 $spacing-unit--micro;
-                    background: #fff;
-                    border-radius: 2px;
-                    width: 55%;
-                    display: inline-block;
-                    float: left;
-
-                    a {
-                        @include font-size(11px, $size + 4);
-                        color: $color-text--light;
-                    }
-                }
-    .browser__img {
-        width: 100%;
-    }
 
 //
 // TRUMPS
 //
 $inuit-widths-columns: (12);
-@import "bower_components/inuit-widths/trumps.widths";
 $inuit-enable-margins--negative: true;
+@import "bower_components/inuit-widths/trumps.widths";
 @import "bower_components/inuit-spacing/trumps.spacing";
