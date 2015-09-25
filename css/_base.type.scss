@@ -57,10 +57,14 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600; // semibold
     color: $color-headings;
+
+    a:hover & {
+        color: $color-brand;
+    }
 }
 
 h1 {
-    margin: $spacing-unit--large 0 $spacing-unit;
+    margin: 0 0 $spacing-unit;
 }
 
 h2 {

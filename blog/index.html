@@ -17,12 +17,15 @@ site_nav_index: 4
                     and get to showcase it here. This introduction sucks.</p>
             </div>
 
-            {% for post in site.posts %}
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                    <h3>{{ post.title }}</h3>
-                    <p>Aaron Lord on {{ post.date | date_to_string }}</p>
-                </a>
-            {% endfor %}
+            <ul class="list-ui u-mt+">
+                {% for post in site.posts %}
+                    <li class="list-ui__item">
+                        <a class="link-block" href="{{ post.url | prepend: site.baseurl }}">
+                            <h3 class="heading">{{ post.title }}</h3>
+                            <span>Aaron Lord on {{ post.date | date_to_string }}</span>
+                        </a>
+                {% endfor %}
+            </ul>
         </div><!--
     --></section>
 </div>
