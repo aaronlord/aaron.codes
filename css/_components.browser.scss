@@ -5,6 +5,11 @@
     display: inline-block;
     border-radius: 4px;
     width: 100%;
+
+    img,
+    video {
+        width: 100%;
+    }
 }
     .browser__chrome {
         line-height: 0;
