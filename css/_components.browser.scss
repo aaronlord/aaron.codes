@@ -47,15 +47,13 @@
                     padding: 0 $spacing-unit--micro;
                     background: #fff;
                     border-radius: 2px;
-                    width: 55%;
+                    width: 75%;
                     display: inline-block;
                     float: left;
+                    overflow: hidden;
 
                     a {
                         @include font-size(11px, $size + 4);
                         color: $color-text--light;
                     }
                 }
-    .browser__img {
-        width: 100%;
-    }
