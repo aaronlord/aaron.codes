@@ -48,6 +48,7 @@
                 color: $color-headings;
 
                 &:hover,
+                .page--home     &.site-nav__home,
                 .page--work     &.site-nav__work,
                 .page--services &.site-nav__services,
                 .page--blog     &.site-nav__blog,
