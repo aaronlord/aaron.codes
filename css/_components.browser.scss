@@ -1,3 +1,7 @@
+$browser-color-close:    $color-red;
+$browser-color-minimize: $color-yellow;
+$browser-color-maximize: $color-green;
+
 .browser {
     padding: 0;
     margin:  0 0 $spacing-unit;
@@ -27,21 +31,22 @@
             }
                 .browser__blob {
                     $size: 10px;
+
                     width:         $size;
                     height:        $size;
                     border-radius: $size;
-                    background: #fff;
+                    background: $color-white;
                     display: block;
                     margin: 1px 0;
 
                     &.browser__blob--close {
-                        background: #DC5844;
+                        background: $browser-color-close;
                     }
                     &.browser__blob--minimize {
-                        background: #EBB74E;
+                        background: $browser-color-minimize;
                     }
                     &.browser__blob--maximize {
-                        background: #9AD05E;
+                        background: $browser-color-maximize;
                     }
                 }
 
@@ -51,7 +56,7 @@
                     height: $size + 4;
                     margin:  -2px 0 0 $spacing-unit--micro;
                     padding: 0 $spacing-unit--micro;
-                    background: #fff;
+                    background: $color-white;
                     border-radius: 2px;
                     width: 75%;
                     display: inline-block;

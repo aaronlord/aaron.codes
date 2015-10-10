@@ -28,7 +28,15 @@
     }
 
     .chapter__header {
+        margin: $spacing-unit--large 0 $spacing-unit;
 
+        .heading {
+            margin: 0;
+        }
+
+        .meta {
+            margin: 0;
+        }
     }
 
     .chapter__content {
@@ -36,6 +44,17 @@
     }
         .chapter__intro {
 
+        }
+
+    .chapter__articles {
+
+    }
+        .chapter__article {
+            margin-bottom: $spacing-unit;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
     .chapter__meta {

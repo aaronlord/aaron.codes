@@ -57,26 +57,35 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600; // semibold
     color: $color-headings;
+    margin-top: ($spacing-unit + $spacing-unit--small);
+    margin-left: 0;
+    margin-right: 0;
 
     a:hover & {
         color: $color-brand;
     }
 }
 
-h1 {
-    margin: 0 0 $spacing-unit;
-}
-
-h2 {
-    margin: $spacing-unit 0;
-    border-bottom: 1px solid $color-ui;
-}
-
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: $spacing-unit 0 $spacing-unit--small;
+    margin-bottom: $spacing-unit--small;
+
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6 {
+        margin-top: 0;
+    }
+}
+
+h2 {
+    border-bottom: 1px solid $color-ui;
 }
 
 h6 {
@@ -157,7 +166,7 @@ blockquote {
     }
 
 pre {
-    background: #f7f7f7;
+    background: $color-ui--light;
     border-radius: 4px;
     padding: $spacing-unit--small;
 
@@ -177,7 +186,7 @@ code {
     padding: 0.2em;
     margin: 0;
     font-size: 90%;
-    background: #f7f7f7;
+    background: $color-ui--light;
     border-radius: 4px;
 }
 

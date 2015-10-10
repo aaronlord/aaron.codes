@@ -1,0 +1,12 @@
+.site-content {
+    height: 100%;
+    padding-top: 81px + $spacing-unit;
+
+    @include media-query('tablet') {
+        padding-top: 50px + $spacing-unit--large;
+    }
+
+    @include media-query('desk-hd') {
+        padding-top: 74px + $spacing-unit--huge;
+    }
+}
