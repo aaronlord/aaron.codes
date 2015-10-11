@@ -4,7 +4,7 @@ $browser-color-maximize: $color-green;
 
 .browser {
     padding: 0;
-    margin:  0 0 $spacing-unit;
+    margin:  $spacing-unit--small 0 $spacing-unit;
     border: 1px solid $color-ui;
     display: inline-block;
     border-radius: 4px;

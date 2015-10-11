@@ -70,7 +70,7 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600; // semibold
     color: $color-headings;
-    margin: ($spacing-unit + $spacing-unit--small) 0 $spacing-unit--small 0;
+    margin: $spacing-unit--large 0 $spacing-unit--small;
 
     a:hover & {
         color: $color-brand;
@@ -86,12 +86,20 @@ h6 {
     }
 }
 
+h1,
+h2,
+h3 {
+    //margin-top: $spacing-unit--massive;
+}
+
 h2 {
     border-bottom: 1px solid $color-ui;
 }
 
 h6 {
     color: $color-text--light;
+    margin-top: 0;
+    margin-bottom: $spacing-unit--tiny;
 }
 
 //
