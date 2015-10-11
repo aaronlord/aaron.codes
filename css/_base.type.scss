@@ -1,42 +1,55 @@
+$type-big-line-height: 1.1em;
+
 //
 // FONT SIZES
 //
-.giga{
-    @include font-size(80px);
+.giga {
+    @include font-size(80px, $type-big-line-height);
 }
-.mega{
-    @include font-size(64px);
+
+.mega {
+    @include font-size(64px, $type-big-line-height);
 }
-.kilo{
-    @include font-size(52px);
+
+.kilo {
+    @include font-size(42px, $type-big-line-height);
+
+    @include media-query('tablet') {
+        @include font-size(47px, $type-big-line-height);
+    }
+
+    @include media-query('desk') {
+        @include font-size(52px, $type-big-line-height);
+    }
 }
 
 h1,
-.alpha{
+.alpha {
     @include font-size(32px);
 }
 
 h2,
-.beta{
+.beta {
     @include font-size(28px);
 }
 
 h3,
-.gamma{
+.gamma {
     @include font-size(24px);
 }
 
 h4,
-.delta{
+.delta {
     @include font-size(20px);
 }
 
 h5,
-.epsilon{
+.epsilon {
     @include font-size(16px);
 }
+
 h6,
-.zeta{
+.zeta {
     @include font-size(16px);
 }
 
@@ -57,22 +70,11 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600; // semibold
     color: $color-headings;
-    margin-top: ($spacing-unit + $spacing-unit--small);
-    margin-left: 0;
-    margin-right: 0;
+    margin: ($spacing-unit + $spacing-unit--small) 0 $spacing-unit--small 0;
 
     a:hover & {
         color: $color-brand;
     }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-bottom: $spacing-unit--small;
 
     + h1,
     + h2,

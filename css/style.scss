@@ -67,6 +67,14 @@ $inuit-list-ui-border-width: 0;
 //
 // COMPONENTS
 //
+.site-head {
+    @include media-query('tablet') {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
 @import "components.site-nav";
 @import "components.site-content";
 @import "components.browser";

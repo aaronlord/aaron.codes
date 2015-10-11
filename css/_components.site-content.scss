@@ -1,12 +1,20 @@
+$site-content-nav-padding: 50px;
+
+
 .site-content {
     height: 100%;
-    padding-top: 81px + $spacing-unit;
+    padding-top: $spacing-unit--large;
+    padding-bottom: $spacing-unit;
 
     @include media-query('tablet') {
-        padding-top: 50px + $spacing-unit--large;
+        padding-top: $site-content-nav-padding + $spacing-unit--large;
+    }
+
+    @include media-query('desk') {
+        padding-top: $site-content-nav-padding + $spacing-unit--large + $spacing-unit;
     }
 
     @include media-query('desk-hd') {
-        padding-top: 74px + $spacing-unit--huge;
+        padding-top: $site-content-nav-padding + $spacing-unit--massive;
     }
 }

@@ -9,7 +9,8 @@
     }
 
     .chapter__header,
-    .chapter__content {
+    .chapter__content,
+    .chapter__meta {
         @include media-query('tablet') {
             width: $eleven-twelfths;
         }
@@ -17,7 +18,10 @@
         @include media-query('tablet-hd') {
             width: $ten-twelfths;
         }
+    }
 
+    .chapter__header,
+    .chapter__content {
         @include media-query('desk') {
             width: $eight-twelfths;
         }
@@ -28,14 +32,10 @@
     }
 
     .chapter__header {
-        margin: $spacing-unit--large 0 $spacing-unit;
+        margin-bottom: $spacing-unit;
 
         .heading {
-            margin: 0;
-        }
-
-        .meta {
-            margin: 0;
+            margin-top: 0;
         }
     }
 
@@ -58,12 +58,12 @@
         }
 
     .chapter__meta {
-        display: none;
+        margin-top: $spacing-unit--large;
 
         @include media-query('desk') {
             width: $three-twelfths;
             margin-left: $one-twelfth;
-            display: inline-block;
+            margin-top: 0;
         }
 
         @include media-query('desk-hd') {
