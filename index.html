@@ -9,7 +9,10 @@ site_nav_index: 1
     <div class="vertically-centered__content">
         <div class="wrapper masthead">
             <h1 class="kilo heading">Hey, I'm Aaron</h1>
-            <h3 class="alpha subheading">I make the www fun.</h3>
+            <h3 class="alpha subheading" data-typer-targets="{% for target in site.data.typer-targets %}{{ target }},{% endfor %}I make the www fun.">I make the www fun.</h3>
         </div>
     </div>
 </div>
+
+<script src="/js/plugins.min.js"></script>
+<script>(function(){window.console=console||{};window.console.log=function(){};$('[data-typer-targets]').typer();})();</script>

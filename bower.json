@@ -25,6 +25,8 @@
     "inuit-spacing": "~0.7.0",
     "inuit-starter-kit": "~0.2.9",
     "inuit-widths": "~0.4.2",
-    "modernizr": "~3.0.0"
+    "modernizr": "~3.0.0",
+    "jquery.typer": "*",
+    "jquery": "~2.1.4"
   }
 }
