@@ -37,7 +37,7 @@ Tutors are searched by distance from the query quickly and accurately. Taking in
 the cuvature of the Earth, it's accurate to a few centimeters.
 
 Subjects are searched recursively from parent nodes, down. For example, searching "English" would
-return "English" every one of it's children: "English (GCSE)", "English (A-Level)", "English Literature", etc.
+return "English" and every one of it's children: "English (GCSE)", "English (A-Level)", "English Literature", etc.
 
 Not bad for a bit of math and MySQL.
 
