@@ -3,6 +3,7 @@ name: post
 layout: post
 title: "Project: Tutora."
 tags: freelance work project
+meta: <a href="https://tutora.co.uk">https://tutora.co.uk/</a>
 ---
 
 This is a rare opportunity for me to showcase some of my work that isn't shrouded by an NDA.
@@ -10,7 +11,7 @@ This is a rare opportunity for me to showcase some of my work that isn't shroude
 ![Tutora Brand](/img/blog/project-tutora/brand.jpg)
 
 Starting life as an idea roughed out in an email, I was tasked with planning, branding,
-designing and developing what would become Tutora. Roughly a year later, they've been
+designing and developing what would become [Tutora](https://tutora.co.uk/). Roughly a year later, they've been
 live just over a month.
 
 ### What is it?

@@ -1,6 +1,6 @@
 # Build settings
 markdown : kramdown
-permalink: pretty
+permalink: /:title
 
 # Site settings
 url        : "http://aaron.codes"
