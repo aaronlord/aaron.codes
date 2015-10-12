@@ -23,7 +23,7 @@
                 {% assign videos = include.videos | split: ',' %}
                 {% for video in videos %}
                     {% assign vid = video | split: ':' %}
-                    <source type="{{ vid[0] }}" src="{{ vid[1] }}">
+                    <source src="{{ vid[1] }}">
                 {% endfor %}
                 <img class="browser__img" src="{{ include.src }}" alt="{{ include.alt }}">
             </video>
