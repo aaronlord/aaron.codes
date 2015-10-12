@@ -4,7 +4,8 @@ module.exports = {
             "js/plugins.min.js": [
                 "bower_components/jquery/dist/jquery.js",
                 "bower_components/jquery.typer/src/jquery.typer.js"
-            ]
+            ],
+            "js/main.min.js" : "js/main.js"
         }
     }
 };
